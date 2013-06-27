@@ -29,8 +29,8 @@ void setup()
 { 
   LeftWheel.attach( LWPin );  //  Connects LeftWheel to the pin LWPin
   RightWheel.attach( RWPin );
-  pinMode (2, INPUT);
-  pinMode (3, INPUT);
+  pinMode (6, INPUT);
+  pinMode (5, INPUT);
   // Connects another wheel to be controlled by the pin RWPin
 
 } 
@@ -40,15 +40,15 @@ void loop()
 { 
 
     
-     if(digitalRead(2) == HIGH && digitalRead(3) == HIGH) {
+     if(digitalRead(6) == HIGH && digitalRead(5) == HIGH) {
        Forward (100);
      }
      else
      {
-       if (digitalRead(2) == HIGH && digitalRead(3) == LOW) {
+       if (digitalRead(6) == HIGH && digitalRead(5) == LOW) {
          RotateRight(100);
        }
-       if (digitalRead(2) == LOW && digitalRead(3) == HIGH) {
+       if (digitalRead(6) == LOW && digitalRead(5) == HIGH) {
          RotateLeft(100);
        }
      }     
